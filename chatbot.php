@@ -7,11 +7,5 @@ $chatId = $update["message"]["chat"]["id"];
 $message = $update["message"]["text"];
  if($message){
  file_get_contents($path."/sendmessage?chat_id=".$chatId."under construction");
- }
-if (strpos($message, "/weather") === 0) {
-$location = substr($message, 9);
-$weather = json_decode(file_get_contents("http://api.openweathermap.org/data/2.5/weather?q=".$location."&appid=67a7e4817e651523c627a9fd205cc0dc
-"), TRUE)["weather"][0]["main"];
-file_get_contents($path."/sendmessage?chat_id=".$chatId."&text=Here's the weather in ".$location.": ". $weather);
-}
+
 ?>
