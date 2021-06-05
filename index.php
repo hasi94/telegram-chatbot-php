@@ -6,6 +6,7 @@ $update = json_decode(file_get_contents("php://input"), TRUE);
 $chatId = $update["message"]["chat"]["id"];
 $message = $update["message"]["text"];
  if($message){
+     var_dump($message); die;
  file_get_contents($path."/sendmessage?chat_id=".$chatId."under construction");
  }
 ?>
