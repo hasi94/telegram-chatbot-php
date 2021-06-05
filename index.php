@@ -7,5 +7,5 @@ $chatId = $update["message"]["chat"]["id"];
 $message = $update["message"]["text"];
  if($message){
  file_get_contents($path."/sendmessage?chat_id=".$chatId."under construction");
-
+ }
 ?>
